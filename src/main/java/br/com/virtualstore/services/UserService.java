@@ -79,9 +79,9 @@ public class UserService {
                 .orElseThrow(() -> new EntityNotFoundException("User" + CP.NOT_FOUND + " id:" + id));
     }
 
-    public Page<UserResponse> findAllWithPageAndSearch(String search, Pageable pageable) {
-        return usefulMethods.mapEntityPageIntoDtoPage(repository.findBySearch(search.trim(), pageable), UserResponse.class);
-    }
+//    public Page<UserResponse> findAllWithPageAndSearch(String search, Pageable pageable) {
+//        return usefulMethods.mapEntityPageIntoDtoPage(repository.findBySearch(search.trim(), pageable), UserResponse.class);
+//    }
 
     public List<UserResponse> findAllUsers() {
         return usefulMethods.mapListIntoDtoList(repository.findAll(), UserResponse.class);

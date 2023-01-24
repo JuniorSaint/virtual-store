@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/virtualstore
+    username: postgres
+    password: m2166446
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    # Config about circular reference
+  main:
+    allow-circular-references: true
+    # Config about upload file
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+file:
+  upload-dir: /Volumes/Arquivo/SpringBoot/cooperative/files-storage/
+  # Server configuration
+server:
+  port: 8080
+  # Password security
+security:
+  security-key: 2D4B6150645367566B59703373367639792442264529482B4D6251655468576D

@@ -8,7 +8,7 @@ import lombok.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-@Builder
+
 @Entity
 @Table(name = "customers")
 @NoArgsConstructor

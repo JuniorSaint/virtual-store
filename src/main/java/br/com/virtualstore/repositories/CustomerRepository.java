@@ -13,10 +13,6 @@ import java.util.Optional;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
-    @Query("SELECT DISTINCT obj FROM User obj " +
-            " LOWER(obj.name) LIKE LOWER(CONCAT('%', :search, '%')) " +
-            " OR LOWER(obj.email) LIKE LOWER(CONCAT('%', :search, '%')) ")
-    Page<User> findBySearch(@Param("search") String search, Pageable pageable);
 
     Optional<User> findByEmail(String email);
 

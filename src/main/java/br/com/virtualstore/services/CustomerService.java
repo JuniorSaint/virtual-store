@@ -79,9 +79,9 @@ public class CustomerService {
                 .orElseThrow(() -> new EntityNotFoundException("Customer" + CP.NOT_FOUND + " id:" + id));
     }
 
-    public Page<CustomerResponse> findAllWithPageAndSearch(String search, Pageable pageable) {
-        return usefulMethods.mapEntityPageIntoDtoPage(repository.findBySearch(search.trim(), pageable), CustomerResponse.class);
-    }
+//    public Page<CustomerResponse> findAllWithPageAndSearch(String search, Pageable pageable) {
+//        return usefulMethods.mapEntityPageIntoDtoPage(repository.findBySearch(search.trim(), pageable), CustomerResponse.class);
+//    }
 
     public List<CustomerResponse> findAllUsers() {
         return usefulMethods.mapListIntoDtoList(repository.findAll(), CustomerResponse.class);
