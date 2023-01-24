@@ -1,5 +1,4 @@
-package br.com.cooperative.exceptions;
-
+package br.com.virtualstore.exceptions;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

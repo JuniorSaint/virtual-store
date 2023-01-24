@@ -1,4 +1,4 @@
-package br.com.cooperative.configs;
+package br.com.virtualstore.configs;
 
 public interface CP {
     public static final String HEADER_ATTRIBUTE = "Authorization";

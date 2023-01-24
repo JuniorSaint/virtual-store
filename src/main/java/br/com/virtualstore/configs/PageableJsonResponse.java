@@ -1,4 +1,4 @@
-package br.com.cooperative.configs;
+package br.com.virtualstore.configs;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;

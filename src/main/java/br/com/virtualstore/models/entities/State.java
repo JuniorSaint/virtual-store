@@ -21,6 +21,7 @@ public class State implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
+    private String state;
     private String uf;
+    private String region;
 }

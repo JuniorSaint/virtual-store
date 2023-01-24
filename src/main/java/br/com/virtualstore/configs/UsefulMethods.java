@@ -1,4 +1,4 @@
-package br.com.cooperative.configs;
+package br.com.virtualstore.configs;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

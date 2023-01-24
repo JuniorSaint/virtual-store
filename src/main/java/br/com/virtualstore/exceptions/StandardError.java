@@ -1,4 +1,4 @@
-package br.com.cooperative.exceptions;
+package br.com.virtualstore.exceptions;
 
 import java.io.Serializable;
 import java.util.Date;

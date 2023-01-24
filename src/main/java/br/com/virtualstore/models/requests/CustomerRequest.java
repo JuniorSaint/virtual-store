@@ -1,28 +1,23 @@
-package br.com.virtualstore.models.entities;
+package br.com.virtualstore.models.requests;
 
+import br.com.virtualstore.models.entities.Address;
+import br.com.virtualstore.models.entities.User;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import jakarta.persistence.*;
+import jakarta.persistence.Transient;
 import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
 @Builder
-@Entity
-@Table(name = "customers")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "id")
-public class Customer extends User implements Serializable {
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "address_id", referencedColumnName = "id")
+public class CustomerRequest extends UserRequest {
     private Address address;
     private String cpf;
     private LocalDate birthday;
-    @Transient
-    private Integer age;
 }

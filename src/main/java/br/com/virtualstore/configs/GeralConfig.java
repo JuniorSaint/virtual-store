@@ -1,4 +1,5 @@
-package br.com.cooperative.configs;
+package br.com.virtualstore.configs;
+
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -9,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.ui.freemarker.FreeMarkerConfigurationFactoryBean;
 
 
 @Configuration
@@ -21,26 +21,18 @@ public class GeralConfig {
         return modelMapper;
     }
 
-    @Primary
-    @Bean
-    public FreeMarkerConfigurationFactoryBean factoryBean() {
-        FreeMarkerConfigurationFactoryBean bean=new FreeMarkerConfigurationFactoryBean();
-        bean.setTemplateLoaderPath("classpath:/templates");
-        return bean;
-    }
-
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("API to manager application Proonto")
+                        .title("API to manager application Virtual Store")
                         .version("v1")
-                        .description("RESTful API develop with Java 11 and Spring Boot 2.7.2")
-                        .termsOfService("https://www.idip.com.br")
+                        .description("RESTful API develop with Java 17 and Spring Boot 3.0.2")
+                        .termsOfService("https://www.junior.com.br")
                         .license(
                                 new License()
                                         .name("Apache 2.0")
-                                        .url("https://www.idip.com.br")
+                                        .url("https://www.junior.com.br")
                         )
                 );
     }

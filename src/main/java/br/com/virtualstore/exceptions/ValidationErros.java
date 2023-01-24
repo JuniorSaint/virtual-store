@@ -1,4 +1,4 @@
-package br.com.cooperative.exceptions;
+package br.com.virtualstore.exceptions;
 
 import lombok.Getter;
 
